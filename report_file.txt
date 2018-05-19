@@ -1,0 +1,29 @@
+C:\Users\ADMIN\Desktop>python nb.py
+accuracy with stop words : 97.192
+accuracy without stop words : 97.624
+
+C:\Users\ADMIN\Desktop>python -W ignore lr.py 0
+Accuracy with stop words : 91.841
+Accuracy without stop words : 93.515
+
+C:\Users\ADMIN\Desktop>python -W ignore lr.py 1
+Accuracy with stop words : 92.887
+Accuracy without stop words : 93.933
+
+C:\Users\ADMIN\Desktop>python -W ignore lr.py    # As lambda value is not given, default value 1 was used
+Accuracy with stop words : 92.887
+Accuracy without stop words : 93.933
+
+C:\Users\ADMIN\Desktop>python -W ignore lr.py 2
+Accuracy with stop words : 92.678
+Accuracy without stop words : 93.305
+
+
+The accuracy increases when stop words are removed because these words are not features of the document and dont help in classifying it.They are just present in all document for the sake of continuity and sense.
+
+The parameters used are lambda = 1, learning rate = 0.05, number of iterations = 50
+
+regularization parameter depends on number of iterations as it is used to remove overfitting.If n is less, lambda is less and if n is more, lambda is more.
+
+overfitting can be caused by iteration too many times on the training data.
+learning rate if too small will not converge and if too large will miss the convergence hence it needs to be in the middle.
